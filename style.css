@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    padding-top: 70px; 
+}
+
+/* header */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255, 91, 3, 0.882);
+    display: flex;
+    justify-content: flex-end;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
+.scrolled {
+    background-color: rgba(230, 152, 74, 0.9);
+}
+
+#logo {
+    position: absolute;
+    left: 80px;
+    top: -42px;
+    height: 150px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 80px;
+    padding-top: 20px;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.nav-links ul li {
+    padding: 0 20px; 
+}
+li a{
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: Medium;
+}
+li a:hover{
+    text-decoration: underline;
+}
+
+li a:active, li a:focus{
+    text-decoration: underline !important;
+}
+
+/* banner */
+#banner {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.banner-text p {
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    transform: translateY(0);
+    transition: transform 0.2s ease-out;
+}
+
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* filter */
+.filter-options {
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.show-per-page {
+    position:absolute;
+    right: 300px;
+    margin-top: 60px;
+}
+
+.sort-options {
+    position:absolute;
+    right: 10px;
+    margin-top: 60px;
+}
+
+#sort{
+    margin-right: 100px;
+}
+
+label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* post */
+.posts-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+    margin-right: 90px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.post-card {
+    display: flex;
+    margin: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100;
+    aspect-ratio: 16/9; 
+    object-fit: cover;
+}
+
+.post-info {
+    padding: 15px 0;
+}
+
+.post-date{
+    font-size: 16px;
+    line-height: 1.2;
+    height: 30px;  
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: normal;
+    color: gray;
+}
+
+.post-title {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+    height: 57.6px;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.page-button, .page-number {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.page-number.active {
+    background-color: rgba(255, 91, 3, 0.882);
+    color: white;
+    font-weight: bold;
+}
+
+.page-button:hover, .page-number:hover {
+    background-color: rgba(255, 91, 3, 0.882);
+    color: white;
+}
+
+/* page */
+.page-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 20px;
+}

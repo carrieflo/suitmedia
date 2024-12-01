@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suitmedia Intern Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <img src="images/logo.png" id="logo">
+        <nav class="nav-links">
+                <ul>
+                    <li><a href="work.html" id="work-link">Work</a></li>
+                    <li><a href="about.html" id="about-link">About</a></li>
+                    <li><a href="services.html" id="services-link">Services</a></li>
+                    <li><a href="index.html" id="ideas-link">Ideas</a></li>
+                    <li><a href="careers.html" id="careers-link">Careers</a></li>
+                    <li><a href="contact.html" id="contact-link">Contact</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <img src="default.jpg" alt="Banner Image" id="banner-image">
+        <div class="banner-text">
+            <h1>Ideas</h1>
+            <p>Where all our great things begin</p>
+        </div>
+        <div class="banner-overlay"></div>
+    </section>
+
+    <main id="main-content">
+        <section class="filter-options">
+            <div class="show-per-page">
+                <label for="items-per-page">Show per page:</label>
+                <select id="items-per-page" name="items-per-page" onchange="sortPosts()">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+        
+            <div class="sort-options">
+                <label for="sort">Sort by:</label>
+                <select id="sort" name="sort">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="posts-list" id="posts-list">
+            <div class="post-card" data-date="2024-12-01">
+                <img src="images/1.jpg" alt="Post 1" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">1 Desember 2024</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2024-09-12">
+                <img src="images/2.jpg" alt="Post 2" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">12 September 2024</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2024-12-03">
+                <img src="images/3.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">3 Desember 2024</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2024-10-06">
+                <img src="images/4.jpeg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">6 Oktober 2024</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2024-12-01">
+                <img src="images/5.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">1 Desember 2024</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2022-12-11">
+                <img src="images/6.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">11 Desember 2022</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2019-01-17">
+                <img src="images/7.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">17 Januari 2019</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2022-02-07">
+                <img src="images/8.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">7 Februari 2022</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2018-05-01">
+                <img src="images/9.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">1 Mei 2018</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2023-07-23">
+                <img src="images/10.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">23 Juli 2023</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2022-07-02">
+                <img src="images/11.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">2 Juli 2023</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2020-07-20">
+                <img src="images/12.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">2 Juli 2020</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+            <div class="post-card" data-date="2021-07-02">
+                <img src="images/13.jpg" alt="Post 3" class="thumbnail" loading="lazy">
+                <div class="post-info">
+                    <h2 class="post-date">2 Juli 2021</h2>
+                    <p class="post-title">This is a brief description of the post content. It will be truncated if it exceeds the allowed space.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="pagination">
+            <button id="prev-button" class="page-button">Previous</button>
+            <span id="page-numbers">
+                <button class="page-number active" data-page="1">1</button>
+                <button class="page-number" data-page="2">2</button>
+                <button class="page-number" data-page="3">3</button>
+                <button class="page-number" data-page="4">4</button>
+                <button class="page-number" data-page="5">5</button>
+            </span>
+            <button id="next-button" class="page-button">Next</button>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
